@@ -19,8 +19,8 @@ const upload = () => {
     const lat = Math.random() * (90 - -90) + -90
     const lng = Math.random() * (180 - -180) + -180
     const data = {
-      lat: lat.toString(),
-      lng: lng.toString()
+      lat: parseFloat(lat.toFixed(6)),
+      lng: parseFloat(lng.toFixed(6))
     }
     fetch(`${url}/${token}`, {
       method: 'POST',
